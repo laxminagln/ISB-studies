@@ -1,7 +1,5 @@
 import React from "react";
-
 import Brick from "./Brick";
-
 import "./Wall.css";
 
 class Wall extends React.Component {
