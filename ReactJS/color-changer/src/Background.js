@@ -1,7 +1,6 @@
 import React from 'react';
 import './Background.css';
 import Colorpick from './Colorpick';
-import { findRenderedComponentWithType } from 'react-dom/test-utils';
 
 class Background extends React.Component {
     constructor(props) {
