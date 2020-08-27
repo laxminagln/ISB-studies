@@ -2,6 +2,70 @@ import React from 'react';
 import './Userform.css';
 
 class Userform extends React.Component {
+    
+    constructor(props) {
+        super(props);
+        this.state = {
+            name:"",
+            email:"",
+            phoneNumber:"",
+            password:"",
+            gender:""
+        };
+    }
+
+    onNameChange = (e) => {
+        this.setState({
+            name: e.target.value
+        });
+    };
+
+    onEmailChange = (e) => {
+        this.setState({
+            email: e.target.value
+        });
+    };
+
+    onPhoneChange = (e) => {
+        this.setState({
+            phoneNumber: e.target.value
+        });
+    };
+
+    onPasswordChange = (e) => {
+        this.setState({
+            password: e.target.value
+        });
+    };
+
+    onGenderChange = (e) => {
+        this.setState({
+            gender: e.target.value
+        });
+    };
+
+    onSubmit = () => {
+        const data = `
+            Name: ${this.state.name},
+            Email: ${this.state.email},
+            Phone: ${this.state.phoneNumber},
+            Gender: ${this.state.gender},
+            Password: ${this.state.password}
+        `;
+        window.alert(data);
+        this.clearForm();
+    };
+
+    clearForm = () => {
+        this.setState({
+            name: "",
+            email: "",
+            phoneNumber: "",
+            password: "",
+            gender: ""
+        });
+    };
+    
     render = () => {
         return(
             <div className="conatainer">
