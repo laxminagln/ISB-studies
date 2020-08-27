@@ -69,7 +69,7 @@ class Userform extends React.Component {
     render = () => {
         return(
             <div className="conatainer">
-                <div>
+                <div className="form_container">
                     <p className="title">User Form</p>
                     <input 
                         type="text" 
